@@ -8,12 +8,6 @@ name: Anchore Grype vulnerability scan
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  schedule:
-    - cron: '25 3 * * 1'
   workflow_run:
     workflows: [ "Anchore Syft SBOM scan" ]
     types: [ completed ]
@@ -23,6 +17,7 @@ permissions:
 
 jobs:
   Anchore-Build-Scan:
+    if: github.event.workflow_run.conclusion == 'success'
     permissions:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
@@ -34,7 +29,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: image-sbom.cdx.json
-        path: image-sbom.cdx.json
+        path: .
     - name: Scan SBOM
       uses: anchore/scan-action@v6
       id: scan
