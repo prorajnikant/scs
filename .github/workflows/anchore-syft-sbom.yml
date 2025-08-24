@@ -39,5 +39,4 @@ jobs:
         image: "localbuild/testimage:latest"
         format: "cyclonedx-json"
         artifact-name: image-sbom.cdx.json
-        upload-artifact: true # default is true, but keeping here for notes
         dependency-snapshot: true
