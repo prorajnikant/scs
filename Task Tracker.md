@@ -2,13 +2,13 @@
 
 - [X] Read SSDF overview; read SLSA “Provenance”; skim CycloneDX overview. 
 
-- [ ] Add branch protection; add CODEOWNERS; add SECURITY.md.
+- [X] Add branch protection; add CODEOWNERS; add SECURITY.md.
 
-- [ ] Set Actions defaults: least-privilege GITHUB_TOKEN;
+- [X] Set Actions defaults: least-privilege GITHUB_TOKEN;
 
 - [ ] pin all actions to SHAs. 
 
-- [ ] Add Scorecard, Dependency Review, Gitleaks checks. 
+- [X] Add Scorecard, Dependency Review, Gitleaks checks. 
 
 - [ ] Generate SBOM with Syft (CycloneDX); scan with Grype; fail build on High/Critical.
 

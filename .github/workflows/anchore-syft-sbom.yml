@@ -32,11 +32,11 @@ jobs:
     - name: Checkout the code
       uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag localbuild/testimage:latest
+      run: docker build . --file Dockerfile --tag localbuild/image:latest
     - name: Scan the image and upload dependency results
       uses: anchore/sbom-action@v0.20.5
       with:
-        image: "localbuild/testimage:latest"
+        image: "localbuild/image:latest"
         format: "cyclonedx-json"
-        artifact-name: test-image-sbom.cdx.json
+        artifact-name: image-sbom.cdx.json
         dependency-snapshot: true
