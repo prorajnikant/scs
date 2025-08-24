@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= typeof title != 'undefined' ? title : 'SCS Sails App' %></title>
+    
+    <!-- Viewport meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSRF protection -->
+    <meta name="csrf-token" content="<%= typeof _csrf != 'undefined' ? _csrf : '' %>">
+    
+    <!--STYLES-->
+    <%- /* Expose locals as `window.SAILS_LOCALS` :: */ %>
+    <script>
+      window.SAILS_LOCALS = { _: _ };
+    </script>
+    
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <!-- Your HTML content here -->
+    <%- body %>
+    
+    <!--SCRIPTS-->
+    <!--SCRIPTS END-->
+  </body>
+</html>

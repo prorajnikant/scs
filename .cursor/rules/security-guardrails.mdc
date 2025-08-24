@@ -1,0 +1,28 @@
+---
+description: "Security guardrails (ALWAYS). Applies to all requests."
+alwaysApply: true
+globs: ["*"]
+---
+
+# Security Guardrails (Non‑negotiable)
+
+1) Input validation → At every trust boundary enforce strict type/length/format/range. Reject on failure. Prefer validatorjs/validator.js or JSON Schema+Ajv. No string‑built SQL/commands.
+
+2) Authentication & Authorization → No client‑only checks. Server‑side auth on protected routes; explicit least‑privilege RBAC and resource‑ownership checks. Secure cookies (HttpOnly, Secure, SameSite=strict). Validate and rotate tokens.
+
+3) Dependency hallucination → Do **not** invent packages or APIs. Use well‑maintained deps; guard against typosquatting. Provide install commands & rationale. Run SCA/audit (npm|pnpm audit; generate SBOM) on new deps.
+
+4) Sensitive logging → Use centralized logging. **Do not log** stack traces with secrets, customer data, queries/params, tokens, API keys, credentials. Use structured logs with redaction.
+
+5) Fail securely (default‑deny) → On uncertainty or errors, deny access. Return generic error messages; do not expose internals. Timeouts/retries/circuit breakers for outbound calls.
+
+6) Secure defaults & least privilege → Disable debug in non‑dev. Enforce TLS, strict CORS & security headers. Avoid wildcards in perms (S3:*, GRANT ALL, fs 0777). Secrets come from a secret manager/env, not code.
+
+## Preflight (agent self‑check)
+- [ ] Inputs validated & reject on failure
+- [ ] No hardcoded secrets; parameterized queries only
+- [ ] Authentication present & Authorization enforced
+- [ ] No invented/unchecked dependencies
+- [ ] Logs redact sensitive fields; no PII/secrets
+- [ ] Debug off; perms scoped; no wildcards
+- [ ] Errors fail closed; responses generic

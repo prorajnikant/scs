@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Welcome to SCS Sails App</h1>
+      <p>This is a lightweight Sails.js application.</p>
+      
+      <p><strong>Current Time:</strong> <span class="timestamp"></span></p>
+      
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">API Endpoints</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>GET /</strong> - Home page (this page)
+            </li>
+            <li class="list-group-item">
+              <strong>GET /health</strong> - Health check endpoint
+            </li>
+            <li class="list-group-item">
+              <strong>GET /api/v1/users</strong> - List users (if authenticated)
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-4">
+        <h5>App Information</h5>
+        <p><strong>Environment:</strong> <%= typeof environment != 'undefined' ? environment : 'development' %></p>
+        <p><strong>Version:</strong> 1.0.0</p>
+        <p><strong>Timestamp:</strong> <%= new Date().toISOString() %></p>
+      </div>
+    </div>
+  </div>
+</div>

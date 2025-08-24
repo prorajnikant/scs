@@ -1,0 +1,44 @@
+{
+  "name": "scs-sails-app",
+  "version": "1.0.0",
+  "description": "Lightweight Sails.js application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "sails lift",
+    "build": "sails build",
+    "test": "npm run lint",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "sails": "^1.5.3",
+    "sails-hook-orm": "^4.0.3",
+    "sails-hook-sockets": "^3.0.2",
+    "sails-hook-grunt": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "mocha": "^10.3.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "sails": {
+    "hooks": {
+      "grunt": false
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/scs.git"
+  },
+  "keywords": [
+    "sails",
+    "sailsjs",
+    "nodejs",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
