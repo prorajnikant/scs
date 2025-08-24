@@ -38,5 +38,5 @@ jobs:
       with:
         image: "localbuild/testimage:latest"
         format: "cyclonedx-json"
-        artifact-name: image-sbom.cdx.json
+        artifact-name: test-image-sbom.cdx
         dependency-snapshot: true
