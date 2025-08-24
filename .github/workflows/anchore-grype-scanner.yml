@@ -25,11 +25,12 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v4
-    - name: Download SBOM artifact from previous workflow
+    - name: Download SBOM artifact from Syft workflow
       uses: actions/download-artifact@v4
       with:
         name: image-sbom.cdx.json
-        path: .
+        run-id: ${{ github.event.workflow_run.id }}
+        path: image-sbom.cdx.json
     - name: Scan SBOM
       uses: anchore/scan-action@v6
       id: scan
