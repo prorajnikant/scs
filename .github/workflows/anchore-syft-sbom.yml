@@ -38,6 +38,7 @@ jobs:
       with:
         image: "localbuild/image:latest"
         format: "cyclonedx-json"
+        output-file: image-sbom.cdx.json
         artifact-name: image-sbom.cdx.json
         dependency-snapshot: true
         upload-artifact: false
@@ -45,4 +46,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: image-sbom.cdx.json
-        path: .
+        path: image-sbom.cdx.json
