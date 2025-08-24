@@ -42,6 +42,7 @@ jobs:
       with:
         name: image-sbom.cdx.json
         run-id: ${{ github.event.workflow_run.id }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         path: .
     - name: Scan SBOM
       uses: anchore/scan-action@v6
