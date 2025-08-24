@@ -30,7 +30,7 @@ jobs:
       with:
         name: image-sbom.cdx.json
         run-id: ${{ github.event.workflow_run.id }}
-        path: image-sbom.cdx.json
+        path: .
     - name: Scan SBOM
       uses: anchore/scan-action@v6
       id: scan
