@@ -34,7 +34,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: image-sbom.cdx.json
-        path: .
+        path: image-sbom.cdx.json
     - name: Scan SBOM
       uses: anchore/scan-action@v6
       id: scan
