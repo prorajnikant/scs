@@ -22,6 +22,8 @@ on:
   
 permissions:
   contents: read
+  id-token: write
+  attestations: write
 
 jobs:
   Anchore-Build-Scan:
@@ -30,7 +32,9 @@ jobs:
     - name: Checkout the code
       uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag localbuild/image:latest
+      run: |
+        docker build . --file Dockerfile --tag localbuild/image:latest
+        docker save localbuild/image:latest -o image.tar
     - name: Scan the image and upload SBOM artifact
       uses: anchore/sbom-action@v0.20.5
       with:
@@ -38,3 +42,8 @@ jobs:
         format: "cyclonedx-json"
         artifact-name: image-sbom.cdx.json
         dependency-snapshot: true
+    - name: Attest SBOM
+      uses: actions/attest-sbom@v2
+      with:
+        subject-path: 'image.tar'
+        sbom-path: 'image-sbom.cdx.json'
