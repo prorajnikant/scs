@@ -38,8 +38,3 @@ jobs:
         format: "cyclonedx-json"
         artifact-name: image-sbom.cdx.json
         dependency-snapshot: true
-    # - name: Upload SBOM artifact
-      # uses: actions/upload-artifact@v4
-      # with:
-        # name: image-sbom.cdx.json
-        # path: image-sbom.cdx.json
