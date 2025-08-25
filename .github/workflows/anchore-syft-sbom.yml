@@ -48,3 +48,8 @@ jobs:
       with:
         subject-path: 'image.tar'
         sbom-path: 'image-sbom.cdx.json'
+    - name: Upload image for verification
+      uses: actions/upload-artifact@v4
+      with:
+        name: docker-image
+        path: image.tar
