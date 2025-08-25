@@ -1,21 +1,27 @@
 ## Enabled on Push and PR on `main`
 
-- [X] Read SSDF overview; read SLSA “Provenance”; skim CycloneDX overview. 
+- **THEORY**
+    - [X] Read & write SSDF goals; skim details
+    - [X] Read & write SLSA “Provenance” overview
+    - [X] Read & write CycloneDX overview
+    - [X] Document weird/ fine-print technology behaviours; *will help the blog content*
+    - [X] Create an open questions list; *they are marked as red, and change to green when answered*
 
-- [X] Add branch protection; add CODEOWNERS; add SECURITY.md.
+- **Practical**
+    - [X] Add branch protection; add CODEOWNERS; ~~add SECURITY.md~~
 
-- [X] Set Actions defaults: least-privilege GITHUB_TOKEN;
+    - [X] Set Actions defaults: least-privilege GITHUB_TOKEN;
 
-- [ ] pin all actions to SHAs. 
+    - [ ] pin all actions to SHAs. 
 
-- [X] Add Scorecard, Dependency Review, Gitleaks checks. 
+    - [X] Add Scorecard, Dependency Review, Gitleaks checks. 
 
-- [X] Generate SBOM with Syft (CycloneDX); scan with Grype; fail build on High/Critical.
+    - [X] Generate SBOM with Syft (CycloneDX); scan with Grype; fail build on High/Critical.
 
-- [ ] Emit Artifact Attestations (provenance) for your build; (optional) Cosign keyless sign container. 
+    - [ ] Emit Artifact Attestations (provenance) for your build; (optional) Cosign keyless sign container. 
 
-- [ ] Run drills: vulnerable dep PR; fake secret; verify attestation/signature. 
+    - [ ] Run drills: vulnerable dep PR; fake secret; verify attestation/signature. 
 
-- [ ] Mark all CI jobs as Required status checks on main. 
+    - [ ] Mark all CI jobs as Required status checks on main. 
 
-- [ ] Write & publish blog with screenshots + links back to official docs.
+    - [ ] Write & publish blog with screenshots + links back to official docs.
