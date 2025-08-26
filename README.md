@@ -18,10 +18,10 @@
 
     - [X] Generate SBOM with Syft (CycloneDX); scan with Grype; fail build on High/Critical.
 
-    - [ ] Emit Artifact Attestations (provenance) for your build; (optional) Cosign keyless sign container. 
+    - [X] Emit Artifact Attestations (provenance) for your build; (optional) Cosign keyless sign container. 
 
     - [ ] Run drills: vulnerable dep PR; fake secret; verify attestation/signature. 
 
-    - [ ] Mark all CI jobs as Required status checks on main. 
+    - [X] Mark all CI jobs as Required status checks on main. 
 
     - [ ] Write & publish blog with screenshots + links back to official docs.
