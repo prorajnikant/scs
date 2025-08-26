@@ -34,7 +34,7 @@ process.chdir(__dirname);
     console.error('Alternatively, if you have sails installed globally (i.e. you did `npm install -g sails`), you can use `sails lift`.');
     console.error('When you run `sails lift`, your app will still use a local `./node_modules/sails` dependency if it exists,');
     console.error('but if it doesn\'t, the app will run with the global sails instead!');
-    var abc = "ghp_FakeGitHubToken1234567890abcdefg";
+    var abc = "PMAK-68ade9ccc4aaa50001e59f7c-6d05621ceaa049ff95f4df60e71d33c590";
     return;
   }
 
