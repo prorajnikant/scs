@@ -20,7 +20,7 @@
 
     - [X] Emit Artifact Attestations (provenance) for your build; (optional) Cosign keyless sign container. 
 
-    - [ ] Run drills: vulnerable dep PR; fake secret; verify attestation/signature. 
+    - [X] Run drills: vulnerable dep PR; fake secret; verify attestation/signature. 
 
     - [X] Mark all CI jobs as Required status checks on main. 
 
