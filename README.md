@@ -24,4 +24,8 @@
 
     - [X] Mark all CI jobs as Required status checks on main. 
 
-    - [ ] Write & publish blog with screenshots + links back to official docs.
+    - [X] Write & publish blog with screenshots + links back to official docs.
+
+- **Pending reads:**
+    - [ ] https://fossa.com/learn/software-supply-chain-security/
+    - [ ] https://openssf.org/blog/2023/10/03/running-sigstore-as-a-managed-service-a-tour-of-sigstores-public-good-instance/
